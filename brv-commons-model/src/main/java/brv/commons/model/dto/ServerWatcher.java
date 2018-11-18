@@ -11,7 +11,6 @@ public class ServerWatcher implements Serializable{
 	 */
 	private static final long serialVersionUID = -7351217101483497056L;
 	
-	
 	private long id;
 	private Protocol protocol;
 	private int port;

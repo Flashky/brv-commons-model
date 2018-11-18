@@ -9,6 +9,7 @@ public class WebServer implements Serializable {
 	private String hostname = "";
 	private int port;
 	
+	
 	public WebServer() {
 		
 	}
