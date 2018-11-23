@@ -3,4 +3,18 @@
   <groupId>brv.commons.model</groupId>
   <artifactId>brv-commons-model</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  	<!-- Publishin in local Nexus -->
+	<!-- TODO dynamic ip -->
+	<distributionManagement>
+	    <snapshotRepository>
+	      <id>nexus-snapshots</id>
+	      <url>http://192.168.1.35:8081/repository/maven-snapshots/</url>
+	    </snapshotRepository>
+	    <repository>
+	      <id>nexus-releases</id>
+	      <url>http://192.168.1.35:8081/repository/maven-releases/</url>
+	    </repository>
+	</distributionManagement>
+	
 </project>

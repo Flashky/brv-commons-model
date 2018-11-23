@@ -18,5 +18,11 @@ pipeline {
 				sh 'mvn -f brv-commons-model/pom.xml install'
 			}
 		}
+		
+		stage('Nexus deploy') {
+			steps {
+				sh 'mvn -f brv-commons-model/pom.xml deploy'
+			}
+		}
 	}
 }
