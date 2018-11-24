@@ -27,7 +27,9 @@ public enum Protocol implements Serializable{
 	HTTPS(	"https",	"://",	443),
 	FTP(	"ftp",		"://",	21);
 	
+	
 	private String name;
+	
 	private String separator;
 	private Integer defaultPort;
 	
