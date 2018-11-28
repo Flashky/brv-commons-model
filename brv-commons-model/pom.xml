@@ -4,13 +4,42 @@
 	<artifactId>brv-commons-model</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
   
-  	<!-- Publishing in local Nexus -->
-	<!-- TODO dynamic ip -->
+
+	<!-- Repositories for downloading artifacts -->
+	<!-- Define URLs under Maven's settings.xml profile/properties -->
+	<repositories>
+	    <repository>
+		    <id>nexus-public</id>
+			<url>${repo.public.url}</url>
+		</repository>
+	</repositories>
 	
-	<parent>
-		<groupId>brv.commons</groupId>
-		<artifactId>commons-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
 	
+	<!-- Repositories for uploading artifacts -->
+	<!-- Define URLs under Maven's settings.xml profile/properties -->
+	<distributionManagement>
+	    <snapshotRepository>
+	      <id>nexus-snapshots</id>
+	      <url>${repo.snapshots.url}</url>
+	    </snapshotRepository>
+	    <repository>
+	      <id>nexus-releases</id>
+	      <url>${repo.releases.url}</url>
+	    </repository>
+	</distributionManagement>
+	
+	<build>
+	    <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+	   	</plugins>
+	</build>
+  
 </project>
