@@ -3,7 +3,6 @@
 	<groupId>brv.commons.model</groupId>
 	<artifactId>brv-commons-model</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
-  
 
 	<!-- Repositories for downloading artifacts -->
 	<!-- Define URLs under Maven's settings.xml profile/properties -->
@@ -41,5 +40,20 @@
 			</plugin>
 	   	</plugins>
 	</build>
+
+	<scm>
+		<!-- La ruta ha de ser la url en la cual se encuentra pom.xml -->
+		<developerConnection>scm:git:https://github.com/Flashky/brv-commons-model/tree/master/brv-commons-model</developerConnection>
+	</scm>
+		  
+	<build>
+	    <plugins>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-release-plugin</artifactId>
+	        <version>2.5.3</version>
+	      </plugin>
+	    </plugins>
+  </build>
   
 </project>
