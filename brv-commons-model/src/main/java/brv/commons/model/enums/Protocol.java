@@ -70,34 +70,4 @@ public enum Protocol implements Serializable{
 	public String getScheme() {
 		return name + separator;
 	}
-    
-	/**
-	 * Attempts to retrieve Protocol value by its String name representation.
-	 * @param name - the <code>String</code> representation to obtain the <code>Protocol</code> from.
-	 * @return <code>Protocol</code> - the Protocol enum value. It will return <code>null</code> if no Protocol matches the provided name.
-	 */
-    public static Protocol getFromString(String name) {
-    	
-    	Protocol result = null;
-    	
-    	boolean match = false;
-		int i = 0;
-		
-		Protocol[] protocols = Protocol.values();
-		
-		while((!match) && (i < protocols.length))
-		{
-			if(protocols[i].getName().equals(name)) {
-				match = true;
-				result = protocols[i];
-			}
-			
-			i++;
-		}
-		
-		return result;
-    }
-	
-	
-
 }
