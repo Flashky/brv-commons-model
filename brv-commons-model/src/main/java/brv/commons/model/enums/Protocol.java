@@ -10,6 +10,7 @@ import java.io.Serializable;
  * <p>
  * Additional information on protocols:<br>
  * @see <a href="http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php">Well Known Protocol numbers</a>
+ * @see <a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">Uri Scheme of every protocol</a>
  * </p>
  * @author flash
  *
@@ -41,6 +42,9 @@ public enum Protocol implements Serializable{
 	
 	/**
 	 * Secure Shell Protocol.
+	 * 
+	 * @see {@link Protocol#SFTP}
+	 * @see {@link Protocol#SCP}
 	 */
 	SSH(	"ssh",		"://",	22),
 	
