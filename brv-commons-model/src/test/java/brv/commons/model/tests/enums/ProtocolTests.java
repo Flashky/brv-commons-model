@@ -12,10 +12,10 @@ import brv.commons.model.enums.Protocol;
  * For each new protocol, the following tests should be added:
  * </p>
  * <ul>
- * 	<li><pre>testPort&lt;Protocol&gt;()</pre></li>
- *	<li><pre>testName&lt;Protocol&gt;()</pre></li>
- *	<li><pre>testScheme&lt;Protocol&gt;()</pre></li>
- *	<li><pre>testStringCast&lt;Protocol&gt;()</pre></li>
+ * 	<li><code>testPort&lt;Protocol&gt;()</code></li>
+ *	<li><code>testName&lt;Protocol&gt;()</code></li>
+ *	<li><code>testScheme&lt;Protocol&gt;()</code></li>
+ *	<li><code>testStringCast&lt;Protocol&gt;()</code></li>
  * </ul>
  * @author Flashk
  *
@@ -43,13 +43,33 @@ class ProtocolTests {
 	}
 	
 	@Test
+	void testPortSsh() {
+		assertEquals(22, Protocol.SSH.getDefaultPort().intValue());
+	}
+	
+	@Test
+	void testPortSftp() {
+		assertEquals(22, Protocol.SFTP.getDefaultPort().intValue());
+	}
+	
+	@Test
+	void testPortScp() {
+		assertEquals(22, Protocol.SCP.getDefaultPort().intValue());
+	}
+	
+	@Test
 	void testPortHttp() {
 		assertEquals(80, Protocol.HTTP.getDefaultPort().intValue());
 	}
 	
 	@Test
-	void testNameHttps() {
+	void testPortHttps() {
 		assertEquals(443, Protocol.HTTPS.getDefaultPort().intValue());
+	}
+	
+	@Test
+	void testPortFtps() {
+		assertEquals(990, Protocol.FTPS.getDefaultPort().intValue());
 	}
 	
 	// --------------------------------------------------------------------
@@ -67,13 +87,33 @@ class ProtocolTests {
 	}
 	
 	@Test
+	void testNameSsh() {
+		assertEquals("ssh", Protocol.SSH.getName());
+	}
+	
+	@Test
+	void testNameSftp() {
+		assertEquals("sftp", Protocol.SFTP.getName());
+	}
+	
+	@Test
+	void testNameScp() {
+		assertEquals("scp", Protocol.SCP.getName());
+	}
+	
+	@Test
 	void testNameHttp() {
 		assertEquals("http", Protocol.HTTP.getName());
 	}
 	
 	@Test
-	void testPortHttps() {
+	void testNameHttps() {
 		assertEquals("https", Protocol.HTTPS.getName());
+	}
+	
+	@Test
+	void testNameFtps() {
+		assertEquals("ftps", Protocol.FTPS.getName());
 	}
 	
 	// --------------------------------------------------------------------
@@ -91,6 +131,21 @@ class ProtocolTests {
 	}
 	
 	@Test
+	void testSchemeSsh() {
+		assertEquals("ssh://", Protocol.SSH.getScheme());
+	}
+	
+	@Test
+	void testSchemeSftp() {
+		assertEquals("sftp://", Protocol.SFTP.getScheme());
+	}
+	
+	@Test
+	void testSchemeScp() {
+		assertEquals("scp://", Protocol.SCP.getScheme());
+	}
+	
+	@Test
 	void testSchemeHttp() {
 		assertEquals("http://", Protocol.HTTP.getScheme());
 	}
@@ -98,6 +153,11 @@ class ProtocolTests {
 	@Test
 	void testSchemeHttps() {
 		assertEquals("https://", Protocol.HTTPS.getScheme());
+	}
+	
+	@Test
+	void testSchemeFtps() {
+		assertEquals("ftps://", Protocol.FTPS.getScheme());
 	}
 	
 	// --------------------------------------------------------------------
@@ -116,6 +176,21 @@ class ProtocolTests {
 	}
 	
 	@Test
+	void testStringCastSsh() {
+		assertEquals(Protocol.SSH, Protocol.valueOf("SSH"));
+	}
+	
+	@Test
+	void testStringCastSftp() {
+		assertEquals(Protocol.SFTP, Protocol.valueOf("SFTP"));
+	}
+	
+	@Test
+	void testStringCastScp() {
+		assertEquals(Protocol.SCP, Protocol.valueOf("SCP"));
+	}
+	
+	@Test
 	void testStringCastHttp() {
 		assertEquals(Protocol.HTTP, Protocol.valueOf("HTTP"));
 	}
@@ -123,6 +198,11 @@ class ProtocolTests {
 	@Test
 	void testStringCastHttps() {
 		assertEquals(Protocol.HTTPS, Protocol.valueOf("HTTPS"));
+	}
+	
+	@Test
+	void testStringCastFtps() {
+		assertEquals(Protocol.FTPS, Protocol.valueOf("FTPS"));
 	}
 	
 }

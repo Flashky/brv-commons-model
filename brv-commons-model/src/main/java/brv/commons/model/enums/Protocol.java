@@ -9,7 +9,7 @@ import java.io.Serializable;
  * </p>
  * <p>
  * Additional information on protocols:<br>
- * @see <a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">Protocol numbers</a>
+ * @see <a href="http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php">Well Known Protocol numbers</a>
  * </p>
  * @author flash
  *
@@ -23,10 +23,50 @@ public enum Protocol implements Serializable{
 	 * <a href="https://tools.ietf.org/html/rfc792">RFC792</a> specification.
 	 * </p>*/
 	ICMP(	"icmp", 	"", 	1),
-	HTTP(	"http",		"://",	80),
-	HTTPS(	"https",	"://",	443),
-	FTP(	"ftp",		"://",	21);
 	
+	/**
+	 * Hypertext Transfer Protocol.
+	 */
+	HTTP(	"http",		"://",	80),
+	
+	/**
+	 * Hypertext Transfer Protocol Secure.
+	 */
+	HTTPS(	"https",	"://",	443),
+	
+	/**
+	 * File Transfer Protocol.
+	 */
+	FTP(	"ftp",		"://",	21),
+	
+	/**
+	 * Secure Shell Protocol.
+	 */
+	SSH(	"ssh",		"://",	22),
+	
+	/**
+	 * SSH over File Transfer Protocol.
+	 * <p>This protocol uses SSH as the secure communication layer,
+	 * therefore, it uses he same port as {@link Protocol#SSH}.</p>
+	 * <p>Don't confuse it with {@link Protocol#FTPS} 
+	 * which stands for FTP over TLS.</p>
+	 */
+	SFTP(	"sftp",		"://",	22),
+	
+	/** 
+	 * Secure Copy Protocol.
+	 * <p>This protocol uses SSH as the secure communication layer,  
+	 * therefore, it uses he same port as {@link Protocol#SSH}.</p>
+	 */
+	SCP(	"scp",		"://",	22),
+	
+	/**
+	 * FTP Secure. Also known as FTP over TLS.
+	 * <p>This protocol uses TLS/SSL as the secure communication layer.</p>
+	 * <p>Don't confuse it with {@link Protocol#SFTP} 
+	 * which stands for SSH over FTP.</p>
+	 */
+	FTPS("ftps",		"://",	990);
 	
 	private String name;
 	
