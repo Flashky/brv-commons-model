@@ -1,8 +1,9 @@
 package brv.commons.model.tests.enums;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 import brv.commons.model.enums.Protocol;
 
@@ -20,7 +21,8 @@ import brv.commons.model.enums.Protocol;
  * @author Flashk
  *
  */
-class ProtocolTests {
+
+public class ProtocolTests {
 
 	
 	// README:
@@ -33,42 +35,42 @@ class ProtocolTests {
 	// --------------------------------------------------------------------
 	
 	@Test
-	void testPortIcmp() {
+	public void testPortIcmp() {
 		assertEquals(1, Protocol.ICMP.getDefaultPort().intValue());
 	}
 
 	@Test
-	void testPortFtp() {
+	public void testPortFtp() {
 		assertEquals(21, Protocol.FTP.getDefaultPort().intValue());
 	}
 	
 	@Test
-	void testPortSsh() {
+	public void testPortSsh() {
 		assertEquals(22, Protocol.SSH.getDefaultPort().intValue());
 	}
 	
 	@Test
-	void testPortSftp() {
+	public void testPortSftp() {
 		assertEquals(22, Protocol.SFTP.getDefaultPort().intValue());
 	}
 	
 	@Test
-	void testPortScp() {
+	public void testPortScp() {
 		assertEquals(22, Protocol.SCP.getDefaultPort().intValue());
 	}
 	
 	@Test
-	void testPortHttp() {
+	public void testPortHttp() {
 		assertEquals(80, Protocol.HTTP.getDefaultPort().intValue());
 	}
 	
 	@Test
-	void testPortHttps() {
+	public void testPortHttps() {
 		assertEquals(443, Protocol.HTTPS.getDefaultPort().intValue());
 	}
 	
 	@Test
-	void testPortFtps() {
+	public void testPortFtps() {
 		assertEquals(990, Protocol.FTPS.getDefaultPort().intValue());
 	}
 	
@@ -77,42 +79,42 @@ class ProtocolTests {
 	// --------------------------------------------------------------------
 	
 	@Test
-	void testNameIcmp() {
+	public void testNameIcmp() {
 		assertEquals("icmp", Protocol.ICMP.getName());
 	}
 
 	@Test
-	void testNameFtp() {
+	public void testNameFtp() {
 		assertEquals("ftp", Protocol.FTP.getName());
 	}
 	
 	@Test
-	void testNameSsh() {
+	public void testNameSsh() {
 		assertEquals("ssh", Protocol.SSH.getName());
 	}
 	
 	@Test
-	void testNameSftp() {
+	public void testNameSftp() {
 		assertEquals("sftp", Protocol.SFTP.getName());
 	}
 	
 	@Test
-	void testNameScp() {
+	public void testNameScp() {
 		assertEquals("scp", Protocol.SCP.getName());
 	}
 	
 	@Test
-	void testNameHttp() {
+	public void testNameHttp() {
 		assertEquals("http", Protocol.HTTP.getName());
 	}
 	
 	@Test
-	void testNameHttps() {
+	public void testNameHttps() {
 		assertEquals("https", Protocol.HTTPS.getName());
 	}
 	
 	@Test
-	void testNameFtps() {
+	public void testNameFtps() {
 		assertEquals("ftps", Protocol.FTPS.getName());
 	}
 	
@@ -121,42 +123,42 @@ class ProtocolTests {
 	// --------------------------------------------------------------------
 	
 	@Test
-	void testSchemeIcmp() {
+	public void testSchemeIcmp() {
 		assertEquals("icmp", Protocol.ICMP.getScheme());
 	}
 
 	@Test
-	void testSchemeFtp() {
+	public void testSchemeFtp() {
 		assertEquals("ftp://", Protocol.FTP.getScheme());
 	}
 	
 	@Test
-	void testSchemeSsh() {
+	public void testSchemeSsh() {
 		assertEquals("ssh://", Protocol.SSH.getScheme());
 	}
 	
 	@Test
-	void testSchemeSftp() {
+	public void testSchemeSftp() {
 		assertEquals("sftp://", Protocol.SFTP.getScheme());
 	}
 	
 	@Test
-	void testSchemeScp() {
+	public void testSchemeScp() {
 		assertEquals("scp://", Protocol.SCP.getScheme());
 	}
 	
 	@Test
-	void testSchemeHttp() {
+	public void testSchemeHttp() {
 		assertEquals("http://", Protocol.HTTP.getScheme());
 	}
 	
 	@Test
-	void testSchemeHttps() {
+	public void testSchemeHttps() {
 		assertEquals("https://", Protocol.HTTPS.getScheme());
 	}
 	
 	@Test
-	void testSchemeFtps() {
+	public void testSchemeFtps() {
 		assertEquals("ftps://", Protocol.FTPS.getScheme());
 	}
 	
@@ -165,43 +167,44 @@ class ProtocolTests {
 	// --------------------------------------------------------------------
 	
 	@Test
-	void testStringCastIcmp() {
+	public void testStringCastIcmp() {
 		
 		assertEquals(Protocol.ICMP, Protocol.valueOf("ICMP"));
 	}
 
 	@Test
-	void testStringCastFtp() {
+	public void testStringCastFtp() {
+		
 		assertEquals(Protocol.FTP, Protocol.valueOf("FTP"));
 	}
 	
 	@Test
-	void testStringCastSsh() {
+	public void testStringCastSsh() {
 		assertEquals(Protocol.SSH, Protocol.valueOf("SSH"));
 	}
 	
 	@Test
-	void testStringCastSftp() {
+	public void testStringCastSftp() {
 		assertEquals(Protocol.SFTP, Protocol.valueOf("SFTP"));
 	}
 	
 	@Test
-	void testStringCastScp() {
+	public void testStringCastScp() {
 		assertEquals(Protocol.SCP, Protocol.valueOf("SCP"));
 	}
 	
 	@Test
-	void testStringCastHttp() {
+	public void testStringCastHttp() {
 		assertEquals(Protocol.HTTP, Protocol.valueOf("HTTP"));
 	}
 	
 	@Test
-	void testStringCastHttps() {
+	public void testStringCastHttps() {
 		assertEquals(Protocol.HTTPS, Protocol.valueOf("HTTPS"));
 	}
 	
 	@Test
-	void testStringCastFtps() {
+	public void testStringCastFtps() {
 		assertEquals(Protocol.FTPS, Protocol.valueOf("FTPS"));
 	}
 	

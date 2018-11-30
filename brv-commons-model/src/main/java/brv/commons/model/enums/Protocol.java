@@ -11,6 +11,7 @@ import java.io.Serializable;
  * Additional information on protocols:<br>
  * @see <a href="http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php">Well Known Protocol numbers</a>
  * @see <a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">Uri Scheme of every protocol</a>
+ * @see <a href="https://es.wikipedia.org/wiki/URI_scheme">Uri Scheme of every protocol 2</a>
  * </p>
  * @author flash
  *
@@ -70,7 +71,7 @@ public enum Protocol implements Serializable{
 	 * <p>Don't confuse it with {@link Protocol#SFTP} 
 	 * which stands for SSH over FTP.</p>
 	 */
-	FTPS("ftps",		"://",	990);
+	FTPS(	"ftps",		"://",	990);
 	
 	private String name;
 	
