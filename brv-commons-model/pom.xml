@@ -27,6 +27,12 @@
 	    </repository>
 	</distributionManagement>
 	
+	
+	<scm>
+		<!-- La ruta ha de ser la url en la cual se encuentra pom.xml -->
+		<developerConnection>scm:git:https://github.com/Flashky/brv-commons-model/tree/master/brv-commons-model</developerConnection>
+	</scm>
+	
 	<build>
 	    <plugins>
 			<plugin>
@@ -38,22 +44,15 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-	   	</plugins>
+	     	<plugin>
+	        	<groupId>org.apache.maven.plugins</groupId>
+	        	<artifactId>maven-release-plugin</artifactId>
+	        	<version>2.5.3</version>
+	      	</plugin>
+	    </plugins>
 	</build>
 
-	<scm>
-		<!-- La ruta ha de ser la url en la cual se encuentra pom.xml -->
-		<developerConnection>scm:git:https://github.com/Flashky/brv-commons-model/tree/master/brv-commons-model</developerConnection>
-	</scm>
-		  
-	<build>
-	    <plugins>
-	      <plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-release-plugin</artifactId>
-	        <version>2.5.3</version>
-	      </plugin>
-	    </plugins>
-  </build>
+
+
   
 </project>
