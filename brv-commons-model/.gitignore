@@ -26,8 +26,8 @@
 hs_err_pid*
 
 # Eclipse folders
-.classpath
-.project
+#.classpath
+#.project
 .settings
 .mvn
 
